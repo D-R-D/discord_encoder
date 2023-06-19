@@ -1,3 +1,3 @@
-# discord_template
+# discord_encoder
 
-discordbotのテンプレート
+discordで文字列とバイトコードを相互変換できる子
