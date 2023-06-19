@@ -1,0 +1,22 @@
+{
+  "name": "encoder",
+  "description": "encode or decode function",
+  "options": [
+    {
+      "name": "function",
+      "description": "choice mode of function",
+      "type": 3,
+      "required": true,
+      "choices": [
+        {
+          "name": "encode",
+          "value": "encode"
+        },
+        {
+          "name": "decode",
+          "value": "decode"
+        }
+      ]
+    }
+  ]
+}

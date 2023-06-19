@@ -20,6 +20,7 @@ namespace discord_template
         public readonly string m_ApplicationId;
         public readonly string[] m_GuildIds;
         public readonly string[] m_AdminIds;
+        public readonly IReadOnlyList<EncodingInfo> m_EncoderList;
 
 
         public Settings()
@@ -49,6 +50,9 @@ namespace discord_template
             if (adminId.IsNullOrEmpty()) { throw new Exception($"{nameof(adminId)}.\nadmin_idがnullもしくは空白です。"); }
             m_AdminIds = adminId!.Split(',');
             #endregion
+
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            m_EncoderList = Encoding.GetEncodings().ToList();
         }
     }
 }
